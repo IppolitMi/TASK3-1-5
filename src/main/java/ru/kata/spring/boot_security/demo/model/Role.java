@@ -13,10 +13,8 @@ import java.util.Set;
 public class Role implements GrantedAuthority, Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private int id;
 
-    @Column(name = "role")
     private String roleName;
 
     @ManyToMany(mappedBy = "rolesSet")

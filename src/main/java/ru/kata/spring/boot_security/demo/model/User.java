@@ -15,15 +15,10 @@ public class User implements UserDetails, Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private int id;
-    @Column(name = "username")
     private String username;
-    @Column(name = "name")
     private String name;
-    @Column(name = "age")
     private int age;
-    @Column(name = "password")
     private String password;
     @ManyToMany
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
